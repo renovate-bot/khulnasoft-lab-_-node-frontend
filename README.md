@@ -1,8 +1,8 @@
-[![Build Status](https://travis-ci.org/tiangolo/node-frontend.svg?branch=master)](https://travis-ci.org/tiangolo/node-frontend)
+[![Build Status](https://travis-ci.org/khulnasoft-lab/node-frontend.svg?branch=master)](https://travis-ci.org/khulnasoft-lab/node-frontend)
 
 ## Supported tags and respective `Dockerfile` links
 
-* [`10`, `latest` _(Dockerfile)_](https://github.com/tiangolo/node-frontend/blob/master/Dockerfile)
+* [`10`, `latest` _(Dockerfile)_](https://github.com/khulnasoft-lab/node-frontend/blob/master/Dockerfile)
 
 # Node.js frontend development with Chrome Headless tests
 
@@ -16,7 +16,7 @@ It is derivated from this article I wrote:
 
 > Angular in Docker with Nginx, supporting configurations / environments, built with multi-stage Docker builds and testing with Chrome Headless
 
- [in Medium](https://medium.com/@tiangolo/angular-in-docker-with-nginx-supporting-environments-built-with-multi-stage-docker-builds-bb9f1724e984), and [in GitHub](https://github.com/tiangolo/medium-posts/tree/master/angular-in-docker)
+ [in Medium](https://medium.com/@khulnasoft-lab/angular-in-docker-with-nginx-supporting-environments-built-with-multi-stage-docker-builds-bb9f1724e984), and [in GitHub](https://github.com/khulnasoft-lab/medium-posts/tree/master/angular-in-docker)
 
  ## How to use
 
@@ -44,7 +44,7 @@ npm install --save-dev puppeteer
 
 ```Dockerfile
 # Stage 0, "build-stage", based on Node.js, to build and compile the frontend
-FROM tiangolo/node-frontend:10 as build-stage
+FROM khulnasoft/node-frontend:10 as build-stage
 
 ...
 
@@ -166,7 +166,7 @@ COPY --from=build-stage /nginx.conf /etc/nginx/conf.d/default.conf
 
 ```Dockerfile
 # Stage 0, "build-stage", based on Node.js, to build and compile the frontend
-FROM tiangolo/node-frontend:10 as build-stage
+FROM khulnasoft/node-frontend:10 as build-stage
 
 WORKDIR /app
 
@@ -290,11 +290,11 @@ And because you have a load balancer on top, redirecting requests to `/docs` to 
 
 #### Internal
 
-* ⬆ Bump tiangolo/issue-manager from 0.2.0 to 0.5.0. PR [#18](https://github.com/tiangolo/node-frontend/pull/18) by [@dependabot[bot]](https://github.com/apps/dependabot).
-* 👷 Add dependabot. PR [#13](https://github.com/tiangolo/node-frontend/pull/13) by [@tiangolo](https://github.com/tiangolo).
-* 🔧 Add funding. PR [#15](https://github.com/tiangolo/node-frontend/pull/15) by [@tiangolo](https://github.com/tiangolo).
-* 👷 Add issue-manager GitHub Action. PR [#14](https://github.com/tiangolo/node-frontend/pull/14) by [@tiangolo](https://github.com/tiangolo).
-* 👷 Add latest-changes GitHub Action. PR [#12](https://github.com/tiangolo/node-frontend/pull/12) by [@tiangolo](https://github.com/tiangolo).
+* ⬆ Bump khulnasoft-lab/issue-manager from 0.2.0 to 0.5.0. PR [#18](https://github.com/khulnasoft-lab/node-frontend/pull/18) by [@dependabot[bot]](https://github.com/apps/dependabot).
+* 👷 Add dependabot. PR [#13](https://github.com/khulnasoft-lab/node-frontend/pull/13) by [@khulnasoft-lab](https://github.com/khulnasoft-lab).
+* 🔧 Add funding. PR [#15](https://github.com/khulnasoft-lab/node-frontend/pull/15) by [@khulnasoft-lab](https://github.com/khulnasoft-lab).
+* 👷 Add issue-manager GitHub Action. PR [#14](https://github.com/khulnasoft-lab/node-frontend/pull/14) by [@khulnasoft-lab](https://github.com/khulnasoft-lab).
+* 👷 Add latest-changes GitHub Action. PR [#12](https://github.com/khulnasoft-lab/node-frontend/pull/12) by [@khulnasoft-lab](https://github.com/khulnasoft-lab).
 
 ### Initial Release
 
