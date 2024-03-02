@@ -22,8 +22,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          token: ${{ secrets.NODE_FRONTEND_LATEST_CHANGES }}
-      - uses: docker://tiangolo/latest-changes:0.2.0
-      # - uses: tiangolo/latest-changes@main
+          token: ${{ secrets.ORG_REPO_TOKEN }}
+      - uses: docker://khulnasoft/latest-changes:0.2.0
+      # - uses: khulnasoft/latest-changes-action@main
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
