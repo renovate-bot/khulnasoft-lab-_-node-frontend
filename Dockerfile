@@ -1,4 +1,4 @@
-FROM node:14
+FROM node:24
 
 # Install Puppeteer dependencies
 RUN apt-get update && apt-get install -y wget gnupg2 ca-certificates --no-install-recommends \
